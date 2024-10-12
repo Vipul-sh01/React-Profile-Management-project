@@ -3,15 +3,15 @@
   --primary-color-dark: #218838;
   --text-color: #333;
   --border-color: #ccc;
-  --error-color: #d9534f; /* Slightly darker red for better visibility */
-  --success-color: #5cb85c; /* Slightly darker green for better visibility */
-  --font-size-large: 26px; /* Increased font size for headers */
-  --font-size-medium: 18px; /* Increased medium font size */
+  --error-color: #d9534f; 
+  --success-color: #5cb85c; 
+  --font-size-large: 26px; 
+  --font-size-medium: 18px; 
   --font-size-small: 14px;
-  --spacing-large: 24px; /* Increased large spacing */
-  --spacing-medium: 16px; /* Increased medium spacing */
-  --spacing-small: 10px; /* Reduced small spacing for better balance */
-  --border-radius: 8px; /* Increased border radius for a softer look */
+  --spacing-large: 24px; 
+  --spacing-medium: 16px; 
+  --spacing-small: 10px; 
+  --border-radius: 8px; 
   --transition-duration: 0.3s;
 }
 
@@ -31,11 +31,11 @@ body {
 
 .container {
   width: 100%;
-  max-width: 800px;
-  background-color: rgba(255, 255, 255, 0.6); /* Slightly more opaque for better readability */
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.9); 
   padding: var(--spacing-large);
   margin: var(--spacing-medium);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
   border-radius: var(--border-radius);
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -45,7 +45,7 @@ h2 {
   color: var(--text-color);
   margin-bottom: var(--spacing-large);
   font-size: var(--font-size-large);
-  font-weight: bold; /* Added bold styling for emphasis */
+  font-weight: bold; 
 }
 
 form {
@@ -67,7 +67,7 @@ select {
 input:focus,
 select:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); /* Enhanced focus effect */
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); 
 }
 
 button {
@@ -83,8 +83,8 @@ button {
 
 button:hover {
   background-color: var(--primary-color-dark);
-  transform: translateY(-3px); /* Increased lift on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }
 
 button:focus-visible {
@@ -124,16 +124,16 @@ button:focus-visible {
   }
 
   h2 {
-    font-size: 22px; /* Adjusted for better scaling on smaller devices */
+    font-size: 22px; 
   }
 
   button {
     padding: var(--spacing-small);
-    font-size: var(--font-size-small); /* Unified button font size */
+    font-size: var(--font-size-small); 
   }
 
   input {
     padding: var(--spacing-small);
-    font-size: var(--font-size-small); /* Unified input font size */
+    font-size: var(--font-size-small); 
   }
 }
