@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #28a745;
+  --primary-color-dark: #218838;
+  --text-color: #333;
+  --border-color: #ccc;
+  --error-color: #d9534f; /* Slightly darker red for better visibility */
+  --success-color: #5cb85c; /* Slightly darker green for better visibility */
+  --font-size-large: 26px; /* Increased font size for headers */
+  --font-size-medium: 18px; /* Increased medium font size */
+  --font-size-small: 14px;
+  --spacing-large: 24px; /* Increased large spacing */
+  --spacing-medium: 16px; /* Increased medium spacing */
+  --spacing-small: 10px; /* Reduced small spacing for better balance */
+  --border-radius: 8px; /* Increased border radius for a softer look */
+  --transition-duration: 0.3s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('../assets/images.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.6); /* Slightly more opaque for better readability */
+  padding: var(--spacing-large);
+  margin: var(--spacing-medium);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+  border-radius: var(--border-radius);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-large);
+  font-size: var(--font-size-large);
+  font-weight: bold; /* Added bold styling for emphasis */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  margin-bottom: var(--spacing-medium);
+  padding: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: border-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5); /* Enhanced focus effect */
+}
+
+button {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease, transform 0.2s ease, box-shadow var(--transition-duration) ease;
+}
+
+button:hover {
+  background-color: var(--primary-color-dark);
+  transform: translateY(-3px); /* Increased lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+button:focus-visible {
+  outline: 2px solid var(--primary-color-dark);
+  outline-offset: 2px;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: var(--font-size-small);
+  text-align: center;
+  margin-bottom: var(--spacing-medium);
+}
+
+.success {
+  color: var(--success-color);
+  font-size: var(--font-size-small);
+  text-align: center;
+  margin-bottom: var(--spacing-medium);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%;
+    padding: var(--spacing-medium);
+  }
+
+  h2 {
+    font-size: 22px; /* Adjusted for better scaling on smaller devices */
+  }
+
+  button {
+    padding: var(--spacing-small);
+    font-size: var(--font-size-small); /* Unified button font size */
+  }
+
+  input {
+    padding: var(--spacing-small);
+    font-size: var(--font-size-small); /* Unified input font size */
+  }
+}
