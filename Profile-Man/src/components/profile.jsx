@@ -1,17 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { ProfileContext } from "../controllers/ProfileContext.jsx";
-import { getUserProfile } from "../controllers/ProfileController.jsx";
-import UserProfile from "./UserProfile.jsx"; 
-import '../styles/App.css'; 
+import UserProfile from "./UserProfile.jsx";
+import "../styles/App.css";
 
 const Profile = () => {
   const { state } = useContext(ProfileContext);
-  const user = getUserProfile(state); 
+
+  const user = useMemo(() => state.loggedInUser || null, [state.loggedInUser]);
 
   if (!user) {
     return (
-      <div className="container"> 
-        <p className="error" style={{ textAlign: "center" }}>
+      <div className="container">
+        <p className="error" style={{ textAlign: "center", marginTop: "20px" }}>
           Please log in to view your profile.
         </p>
       </div>
@@ -19,7 +19,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="container"> 
+    <div className="container">
       <UserProfile user={user} />
     </div>
   );

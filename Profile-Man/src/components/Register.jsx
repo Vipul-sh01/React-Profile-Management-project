@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProfileContext } from "../controllers/ProfileContext.jsx";
-import { validateRegistrationForm } from "../controllers/RegistrationController.jsx";
+import { validateRegistrationForm } from "../validations/someHelper.jsx";
 import '../styles/App.css'; 
 
 
